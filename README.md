@@ -3,7 +3,8 @@
 Generador de contraseñas OTP
 Este es un programa en Python que genera contraseñas temporales de un solo uso utilizando el algoritmo de contraseña basada en tiempo (TOTP). El programa utiliza una clave cifrada para generar las contraseñas, lo que garantiza que solo las personas autorizadas puedan generar contraseñas válidas.
 
-Requisitos
+# Requisitos
+
 El programa requiere Python 3 y las siguientes bibliotecas:
 
 argparse: para procesar argumentos de línea de comandos
@@ -13,18 +14,16 @@ hmac: para generar códigos de autenticación de mensajes
 cryptography: para cifrar y descifrar datos
 Puedes instalar las bibliotecas utilizando pip:
 
-# Code
-
-pip install argparse datetime hashlib hmac cryptography
+    pip install argparse datetime hashlib hmac cryptography
 
 # Usage
 
 El programa se puede ejecutar desde la línea de comandos con los siguientes argumentos:
 
-python otp.py [-g KEY | -k FILE]
--g KEY: genera una nueva clave cifrada y la guarda en un archivo. KEY debe ser una cadena hexadecimal de al menos 64 caracteres.
--k FILE: utiliza una clave previamente generada en el archivo especificado. FILE debe ser el nombre del archivo que contiene la clave cifrada.
-Si no se especifica ningún argumento, se mostrará el mensaje de ayuda.
+  python otp.py [-g KEY | -k FILE]
+    -g KEY: genera una nueva clave cifrada y la guarda en un archivo. KEY debe ser una cadena hexadecimal de al menos 64 caracteres.
+    -k FILE: utiliza una clave previamente generada en el archivo especificado. FILE debe ser el nombre del archivo que contiene la clave cifrada.
+  Si no se especifica ningún argumento, se mostrará el mensaje de ayuda.
 
 # Funcionamiento
 El programa consta de dos funciones principales:
@@ -42,13 +41,11 @@ El programa verifica que la hora actual esté dentro del rango permitido para ge
 Ejemplo de uso
 Para generar una nueva clave cifrada y guardarla en un archivo:
 
-# Code
-
-python otp.py -g 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+  python otp.py -g 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+  
 Para generar una nueva contraseña temporal utilizando una clave cifrada previamente generada:
 
-# Code
-
-python otp.py -k ft_otp.key
-Notas adicionales
+  python otp.py -k ft_otp.key
+  
+# Notas adicionales
 El programa utiliza la función signal.signal() para asociar la señal SIGINT con la función signal_handler(). Esto permite que el programa salga de forma segura cuando se presiona Ctrl+C.
