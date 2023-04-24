@@ -1,5 +1,8 @@
 # otp
 
+# CODIGO COMENTADO
+    https://vanilla-text-702.notion.site/OTP-cc85b90b257042609d5b54077bbfd264
+
 Generador de contraseñas OTP
 Este es un programa en Python que genera contraseñas temporales de un solo uso utilizando el algoritmo de contraseña basada en tiempo (TOTP). El programa utiliza una clave cifrada para generar las contraseñas, lo que garantiza que solo las personas autorizadas puedan generar contraseñas válidas.
 
