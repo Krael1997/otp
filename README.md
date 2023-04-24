@@ -13,20 +13,20 @@ hmac: para generar códigos de autenticación de mensajes
 cryptography: para cifrar y descifrar datos
 Puedes instalar las bibliotecas utilizando pip:
 
-Copy
+# Code
 
 pip install argparse datetime hashlib hmac cryptography
-Uso
-El programa se puede ejecutar desde la línea de comandos con los siguientes argumentos:
 
-Copy
+# Usage
+
+El programa se puede ejecutar desde la línea de comandos con los siguientes argumentos:
 
 python otp.py [-g KEY | -k FILE]
 -g KEY: genera una nueva clave cifrada y la guarda en un archivo. KEY debe ser una cadena hexadecimal de al menos 64 caracteres.
 -k FILE: utiliza una clave previamente generada en el archivo especificado. FILE debe ser el nombre del archivo que contiene la clave cifrada.
 Si no se especifica ningún argumento, se mostrará el mensaje de ayuda.
 
-Funcionamiento
+# Funcionamiento
 El programa consta de dos funciones principales:
 
 generate_key(): genera una nueva clave cifrada y la guarda en un archivo.
@@ -42,12 +42,12 @@ El programa verifica que la hora actual esté dentro del rango permitido para ge
 Ejemplo de uso
 Para generar una nueva clave cifrada y guardarla en un archivo:
 
-Copy
+# Code
 
 python otp.py -g 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
 Para generar una nueva contraseña temporal utilizando una clave cifrada previamente generada:
 
-Copy
+# Code
 
 python otp.py -k ft_otp.key
 Notas adicionales
