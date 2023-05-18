@@ -1,5 +1,7 @@
 # otp
 
+<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/clhtd4mr3001608k4xcne0lt5/project/3074174" alt="abelrodr's 42 ft_otp Score" /></a>
+
 # CODIGO COMENTADO
     https://vanilla-text-702.notion.site/OTP-cc85b90b257042609d5b54077bbfd264
 
